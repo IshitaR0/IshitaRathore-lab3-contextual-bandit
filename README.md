@@ -1,74 +1,68 @@
 # Student Submission Checklist (Lab 3)
 
-Before submitting your Lab 3 assignment, ensure that **all items below are completed**. Submissions that do not follow this checklist may receive partial or no credit.
+## Report
 
----
+Epsilon Greedy 
+Best performing epsilon = 0.01, with an average reward of 5.69
+e = 0.5 is seen shooting upwards initially, getting a great reward, but eventually dips quite a lot too, due to lots of exploration. e = 0.01 gradually climbs up and is the best performing one.
 
-## 🔹 Repository and Branching
+UCB
+All the average reward curves appear to be coinciding but c = 0.1 is the best performing exploration parameter. Best average reward = 5.75
 
-* [ ] The repository is correctly created on GitHub.
-* [ ] All work is committed to **exactly one branch** named
-  `firstname_U20230xxx`.
-* [ ] **No work is pushed to `master`**.
-* [ ] The correct branch is pushed to GitHub.
+Softmax 
+For tau = 1, best reward for the softmax strategy is 5.61
 
----
+Overall it is observed that UCB achieves the highest reward. 
 
-## 🔹 Notebook Submission
+Random Forest was selected as the classifier due to its strong performance on structured tabular data, ability to model relationships between user behavioral features, and robustness against overfitting. Since accurate context classification is critical for the contextual bandit system, Random Forest provided stable predictions compared to linear models.
 
-* [ ] Exactly **one** Jupyter Notebook (`.ipynb`) is submitted.
-* [ ] The notebook is placed at the **root of the repository**.
-* [ ] The notebook is named **exactly**:
-  `lab3_results_<roll_number>.ipynb`.
-* [ ] The notebook runs **top to bottom without errors**.
-* [ ] All outputs (plots, tables, metrics) are visible in the notebook.
+The notebook is reproducible after installing the following dependencies;
 
----
+asttokens==3.0.1
+comm==0.2.3
+contourpy==1.3.3
+cycler==0.12.1
+debugpy==1.8.20
+decorator==5.2.1
+executing==2.2.1
+fonttools==4.61.1
+ipykernel==7.2.0
+ipython==9.10.0
+ipython_pygments_lexers==1.1.1
+jedi==0.19.2
+joblib==1.5.3
+jupyter_client==8.8.0
+jupyter_core==5.9.1
+kiwisolver==1.4.9
+matplotlib==3.10.8
+matplotlib-inline==0.2.1
+nest-asyncio==1.6.0
+numpy==2.4.2
+packaging==26.0
+pandas==3.0.0
+parso==0.8.5
+pexpect==4.9.0
+pillow==12.1.0
+platformdirs==4.5.1
+prompt_toolkit==3.0.52
+psutil==7.2.2
+ptyprocess==0.7.0
+pure_eval==0.2.3
+Pygments==2.19.2
+pyparsing==3.3.2
+python-dateutil==2.9.0.post0
+pyzmq==27.1.0
+rlcmab-sampler==1.0.1
+scikit-learn==1.8.0
+scipy==1.17.0
+six==1.17.0
+stack-data==0.6.3
+threadpoolctl==3.6.0
+tornado==6.5.4
+traitlets==5.14.3
+wcwidth==0.6.0
 
-## 🔹 Sampler Usage
 
-* [ ] The provided `sampler` package is used **without modification**.
-* [ ] The sampler is initialized using your correct roll number `i`.
-* [ ] Rewards are obtained **only** via `sampler.sample(j)`.
-* [ ] No hard-coded or synthetic rewards are used.
+----
 
----
-
-## 🔹 Contextual Bandit Implementation
-
-* [ ] User category is treated as the **context**.
-* [ ] News category is treated as the **bandit arm**.
-* [ ] The arm index mapping follows the specification in the lab handout.
-* [ ] All three algorithms are implemented:
-
-  * Epsilon-Greedy
-  * Upper Confidence Bound (UCB)
-  * SoftMax
-
----
-
-## 🔹 Evaluation and Plots
-
-* [ ] Classification accuracy is reported on `test_users.csv`.
-* [ ] Reinforcement learning simulation is run for **T = 10,000 steps**.
-* [ ] Plots include:
-
-  * Average Reward vs. Time (per context)
-  * Hyperparameter comparison plots
-* [ ] All plots have labeled axes, legends, and titles.
-
----
-
-## 🔹 README.md Requirements
-
-* [ ] README.md is present at the repository root.
-* [ ] It explains the overall approach and design decisions.
-* [ ] It summarizes key results and observations.
-* [ ] It includes clear instructions to reproduce the experiments.
-* [ ] All external references (if any) are properly cited.
-
----
-
-## Important Note
-
-> Submissions that do not follow the specified branch name, notebook naming convention, or sampler usage rules may not be evaluated.
+THANK YOU
