@@ -3,14 +3,14 @@
 ## Report
 
 Epsilon Greedy 
-Best performing epsilon = 0.01, with an average reward of 5.69
+Best performing epsilon = 0.01, with an average reward of 5.47
 e = 0.5 is seen shooting upwards initially, getting a great reward, but eventually dips quite a lot too, due to lots of exploration. e = 0.01 gradually climbs up and is the best performing one.
 
 UCB
-All the average reward curves appear to be coinciding but c = 0.1 is the best performing exploration parameter. Best average reward = 5.75
+All the average reward curves appear to be coinciding but c = 1 is the best performing exploration parameter. Best average reward = 5.749
 
 Softmax 
-For tau = 1, best reward for the softmax strategy is 5.61
+For tau = 1, best reward for the softmax strategy is 5.44
 
 Overall it is observed that UCB achieves the highest reward. 
 
